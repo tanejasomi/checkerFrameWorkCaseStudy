@@ -5,6 +5,6 @@ It contains original and annotated version of same.
 Class is checked for nullness checker of Checker Framework.
  
 To compile from terminal install Checker Framework and use following commands 
-javacheck -processor org.checkerframework.checker.nullness.NullnessChecker CodeGeneration.java file
+javacheck -processor org.checkerframework.checker.nullness.NullnessChecker CodeGeneration.java
  
  where javacheck is alias of javacheck is an alias of $CHECKERFRAMEWORK/checker/bin/javac

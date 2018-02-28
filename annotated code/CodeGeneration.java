@@ -38,8 +38,9 @@ public class CodeGeneration {
     @Nullable File f;
 
     CodeGeneration(String outFilePath) {
-        outputFile = (outFilePath + "/mipsOutput.s"); // generate file in path provided
-        f =null;
+        //outFilePath is non null due to check in drive class which will create object of CodeGeneration
+        /*@NonNull*/ outputFile = (outFilePath + "/mipsOutput.s"); // generate file in path provided
+        /*@Nullable*/ f =null;
         this.openFile();
     }
 
@@ -50,7 +51,7 @@ public class CodeGeneration {
     @SuppressWarnings({"argument.type.incompatible","contracts.postcondition.not.satisfied"})
     public void openFile(@UnderInitialization CodeGeneration this) {
         try {
-            this.f = new File(outputFile);
+            this.f = new File(/*@NonNull*/outputFile);
             if (!f.exists()) {
                 f.createNewFile();
                 System.out.println("File mipsOutput.s created!");
